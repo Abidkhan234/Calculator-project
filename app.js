@@ -1,29 +1,22 @@
-let display = document.getElementById("displayValue");
-
-//? To add value
+var display = document.getElementById("display");
 
 function appendToDisplay(input) {
     display.value += input;
 }
 
-//? To clear display
 
 function clearDisplay() {
     display.value = "";
 }
 
-//? To remove the last character from the display
-
-function deleteLastCharacter() {
+function clearLastDigit() {
     display.value = display.value.slice(0, -1);
 }
-
-//? To calculate 
 
 function calculate() {
     try {
         display.value = eval(display.value);
-    } catch (error) {
+    } catch (Error) {
         display.value = "Error";
     }
 }
